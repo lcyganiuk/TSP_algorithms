@@ -11,7 +11,7 @@ struct Config {
     std::string rnnFile;
     int optRNN;
 
-    std::string bfFiles; // "all" albo liczba
+    std::string bfFiles;
 };
 
 Config loadConfig(const std::string& filename);
