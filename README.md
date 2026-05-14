@@ -1,12 +1,12 @@
-# Traveling Salesman Problem Algorithms Comparison (C++)
+# Traveling Salesman Problem Algorithms Comparison
 
 ## Description
-This project focuses on solving the Traveling Salesman Problem (TSP) using different approaches and comparing their performance and solution quality.
+This project focuses on solving the Traveling Salesman Problem using different approaches and comparing their performance and solution quality.
 
 ## Implemented Methods
 - Brute Force (exact solution)
-- Nearest Neighbor (NN)
-- Randomized Nearest Neighbor (RNN)
+- Nearest Neighbor
+- Randomized Nearest Neighbor
 - Random
 
 ## Technologies
