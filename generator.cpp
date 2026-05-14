@@ -9,13 +9,11 @@ using namespace std;
 random_device rd;
 mt19937 gen(rd());
 
-// zakres wag
 int randomWeight(int minW = 1, int maxW = 100) {
     uniform_int_distribution<> dist(minW, maxW);
     return dist(gen);
 }
 
-// generowanie macierzy symetrycznej
 vector<vector<int>> generateSymmetric(int n) {
     vector<vector<int>> matrix(n, vector<int>(n, 0));
 
@@ -30,7 +28,6 @@ vector<vector<int>> generateSymmetric(int n) {
     return matrix;
 }
 
-// generowanie macierzy asymetrycznej
 vector<vector<int>> generateAsymmetric(int n) {
     vector<vector<int>> matrix(n, vector<int>(n, 0));
 
@@ -45,7 +42,6 @@ vector<vector<int>> generateAsymmetric(int n) {
     return matrix;
 }
 
-// zapis do pliku
 void saveToFile(const string& filename, const vector<vector<int>>& matrix) {
     ofstream file(filename);
     int n = matrix.size();
@@ -62,7 +58,6 @@ void saveToFile(const string& filename, const vector<vector<int>>& matrix) {
 }
 
 int main() {
-    // utwórz katalogi jeśli nie istnieją
     filesystem::create_directories("data/sym");
     filesystem::create_directories("data/asym");
 
@@ -70,7 +65,6 @@ int main() {
     int minSize = 6;
     int maxSize = 15;
 
-    // SYMETRYCZNE
     for (int i = 0; i < instanceCount; i++) {
         int n = minSize + (i % (maxSize - minSize + 1));
 
@@ -80,7 +74,6 @@ int main() {
         saveToFile(filename, matrix);
     }
 
-    // ASYMETRYCZNE
     for (int i = 0; i < instanceCount; i++) {
         int n = minSize + (i % (maxSize - minSize + 1));
 
