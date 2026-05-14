@@ -14,7 +14,7 @@ int bruteForce(const TSPInstance& inst) {
         for (int i = 0; i < n; i++)
             cost += inst.matrix[perm[i]][perm[(i+1)%n]];
         if (cost < bestCost) bestCost = cost;
-    } while (std::next_permutation(perm.begin()+1, perm.end())); // fix first node
+    } while (std::next_permutation(perm.begin()+1, perm.end()));
 
     return bestCost;
 }
